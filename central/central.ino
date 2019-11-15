@@ -223,10 +223,6 @@ String calculoAngulos()
       IMU.readAcceleration(ax, ay, az);
     }
     
-    if (IMU.gyroscopeAvailable()) {
-      IMU.readGyroscope(gx, gy, gz);
-    }
-      
     // Calcular los ángulos con el acelerometro
     pitch = atan2(ax, sqrt(ay*ay + az*az));
     roll =  atan2(ay, sqrt(ax*ax + az*az));
